@@ -1,0 +1,120 @@
+# ===========================
+# Dependencies
+# ===========================
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.pnpm-store/
+
+
+
+*.md
+# ===========================
+# VitePress
+# ===========================
+# VitePress 缓存
+blog/.vitepress/cache/
+blog/.vitepress/.temp/
+
+# VitePress 默认构建输出（已改为 company-site/blog）
+blog/.vitepress/dist/
+
+# 博客构建输出到公司网站目录
+company-site/blog/
+
+# ===========================
+# Logs
+# ===========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ===========================
+# Editor directories and files
+# ===========================
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ===========================
+# OS
+# ===========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ===========================
+# Build & Dist
+# ===========================
+dist/
+dist-ssr/
+*.local
+
+# ===========================
+# Environment Variables
+# ===========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===========================
+# Testing
+# ===========================
+coverage/
+*.lcov
+.nyc_output/
+
+# ===========================
+# Temporary files
+# ===========================
+*.tmp
+*.temp
+.cache/
+
+# ===========================
+# Backup files
+# ===========================
+*.bak
+*.backup
+*.old
