@@ -448,6 +448,135 @@
     word-break:break-word;
   }
 
+  /* 团队成员卡片 */
+  .team-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:24px;
+  }
+  .team-card{
+    border:1px solid var(--line);
+    background:#fff;
+    border-radius:var(--radius);
+    padding:24px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.02);
+    transition: box-shadow .2s, transform .2s;
+  }
+  .team-card:hover{
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+  }
+  .team-card__header{
+    display:flex;
+    gap:16px;
+    align-items:center;
+    padding-bottom:20px;
+    border-bottom:1px solid var(--line);
+  }
+  .team-card__avatar{
+    width:80px;
+    height:80px;
+    min-width:80px;
+    border-radius:50%;
+    overflow:hidden;
+    background:var(--alt);
+    border:2px solid var(--line);
+  }
+  .team-card__avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .team-card__info{
+    min-width:0;
+  }
+  .team-card__name{
+    font-size:20px;
+    font-weight:700;
+    margin:0 0 6px;
+    overflow-wrap:break-word;
+    word-break:break-word;
+  }
+  .team-card__title{
+    font-size:14px;
+    color:var(--muted);
+    margin:0;
+    overflow-wrap:break-word;
+    word-break:break-word;
+  }
+  .team-card__content{
+    margin-top:20px;
+  }
+  .team-card__section{
+    margin-bottom:20px;
+  }
+  .team-card__section:last-child{
+    margin-bottom:0;
+  }
+  .team-card__section h5{
+    font-size:15px;
+    font-weight:600;
+    margin:0 0 10px;
+  }
+  .team-card__section p{
+    font-size:14px;
+    line-height:1.6;
+    color:var(--muted);
+    margin:0;
+    overflow-wrap:break-word;
+    word-break:break-word;
+  }
+  .team-card__contact{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .contact-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:14px;
+    color:var(--muted);
+    padding:8px 12px;
+    background:var(--alt);
+    border-radius:12px;
+  }
+  .contact-icon{
+    font-size:18px;
+  }
+  
+  /* 占位卡片 */
+  .team-card--placeholder{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:400px;
+    background:var(--alt);
+    border-style:dashed;
+  }
+  .team-card__placeholder-content{
+    text-align:center;
+    padding:20px;
+  }
+  .team-card__placeholder-icon{
+    font-size:48px;
+    margin-bottom:16px;
+    opacity:0.5;
+  }
+  .team-card__placeholder-content h4{
+    font-size:18px;
+    font-weight:600;
+    margin:0 0 10px;
+  }
+  .team-card__placeholder-content p{
+    font-size:14px;
+    color:var(--muted);
+    margin:0;
+    max-width:280px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
   /* 课程详情页 */
   .course-detail__back{
     display:inline-block;
@@ -561,6 +690,7 @@
     .video-grid{ grid-template-columns: repeat(2, 1fr); }
     .blog-grid{ grid-template-columns: repeat(2, 1fr); }
     .category-grid{ grid-template-columns: repeat(2, 1fr); }
+    .team-grid{ grid-template-columns: 1fr; }
     .channel-groups{ justify-content:center; }
   }
 
@@ -588,6 +718,7 @@
     .video-grid{ grid-template-columns: 1fr; }
     .blog-grid{ grid-template-columns: 1fr; }
     .category-grid{ grid-template-columns: 1fr; }
+    .team-grid{ grid-template-columns: 1fr; }
     .pricing{ grid-template-columns: 1fr; }
     .contact{ grid-template-columns: 1fr; }
     .stats{ grid-template-columns: 1fr; max-width:none; }
@@ -607,5 +738,8 @@
     .channel-item{ padding:10px 18px; font-size:14px; }
     .blog-card__title{ font-size:16px; }
     .category-card__icon{ font-size:28px; }
+    .team-card{ padding:18px; }
+    .team-card__avatar{ width:60px; height:60px; min-width:60px; }
+    .team-card__name{ font-size:18px; }
   }
   
