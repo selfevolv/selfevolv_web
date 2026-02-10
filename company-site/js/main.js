@@ -53,3 +53,51 @@
     }
   })();
   
+
+  // 悬浮按钮：更多内容
+  (function () {
+    function initFloatingShopBtn() {
+      const trigger = document.querySelector(".floating-shop-btn__trigger");
+      const menu = document.querySelector(".floating-shop-btn__menu");
+      const closeBtn = document.querySelector(".floating-shop-btn__close");
+
+      if (!trigger || !menu || !closeBtn) return;
+
+      // 打开菜单
+      trigger.addEventListener("click", () => {
+        menu.classList.toggle("is-open");
+      });
+
+      // 关闭菜单
+      closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        menu.classList.remove("is-open");
+      });
+
+      // 点击外部关闭菜单
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".floating-shop-btn")) {
+          menu.classList.remove("is-open");
+        }
+      });
+
+      // 点击链接后关闭菜单
+      menu.querySelectorAll(".floating-shop-btn__link").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("is-open");
+        });
+      });
+    }
+
+    // 在布局加载完成后初始化
+    document.addEventListener("layoutReady", initFloatingShopBtn);
+    
+    // 如果没有使用布局加载器，直接初始化
+    if (!document.getElementById("header-placeholder")) {
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initFloatingShopBtn);
+      } else {
+        initFloatingShopBtn();
+      }
+    }
+  })();

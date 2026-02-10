@@ -128,13 +128,6 @@
             </a>
           </article>
         </div>
-        <div class="channel-group" style="margin-top: 24px;">
-          <h3 class="channel-group__title">更多内容见网店：</h3>
-          <div class="channels">
-            <a class="channel-item" href="https://www.xiaohongshu.com/shop/667120f653fb2b0001b1b963" target="_blank" rel="noopener">小红书店</a>
-            <a class="channel-item" href="https://shop452101329.taobao.com/" target="_blank" rel="noopener">淘宝店</a>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -348,6 +341,34 @@
     </section>
 
   </main>
+
+  <!-- 悬浮按钮：更多内容 -->
+  <div class="floating-shop-btn">
+    <button class="floating-shop-btn__trigger" aria-label="更多内容">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+      <span>更多内容</span>
+    </button>
+    <div class="floating-shop-btn__menu">
+      <div class="floating-shop-btn__menu-header">
+        <h4>更多内容见网店</h4>
+        <button class="floating-shop-btn__close" aria-label="关闭">×</button>
+      </div>
+      <div class="floating-shop-btn__menu-content">
+        <a href="https://www.xiaohongshu.com/shop/667120f653fb2b0001b1b963" target="_blank" rel="noopener" class="floating-shop-btn__link">
+          <span class="floating-shop-btn__icon">🛍️</span>
+          <span class="floating-shop-btn__text">小红书店</span>
+        </a>
+        <a href="https://shop452101329.taobao.com/" target="_blank" rel="noopener" class="floating-shop-btn__link">
+          <span class="floating-shop-btn__icon">🛒</span>
+          <span class="floating-shop-btn__text">淘宝店</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <div id="footer-placeholder"></div>
 
